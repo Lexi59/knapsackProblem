@@ -69,7 +69,7 @@ function greedyAlgorithm(){
 
 	var sorted = items.sort((a,b)=>(b.value/b.weight)-(a.value/a.weight));
 	
-	while(currentWeight + sorted[currentIndex].weight <= maxWeight)
+	while(currentIndex < N && currentWeight + sorted[currentIndex].weight <= maxWeight)
 	{
 		currentWeight += sorted[currentIndex].weight;
 		currentVal += sorted[currentIndex].value;
